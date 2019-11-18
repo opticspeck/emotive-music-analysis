@@ -17,7 +17,7 @@ cc_variables = ['mean', 'cov', 'icov']
 
 def generate_normal_attributes(variable_name):
     if number_of_commas > 0:
-        for x in range(number_of_commas):
+        for x in range(number_of_commas + 1):
             print('@attribute     ' + type_of_attribute + '.' + name_of_attribute + '.' + variable_name + '_' + str(
                 x) + '    REAL')
     else:

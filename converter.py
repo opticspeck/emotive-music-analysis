@@ -11,7 +11,7 @@ filtered_string = ""
 list_of_nums = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 list_of_mums_and_separators = list_of_nums + ['.'] + ['-']
 
-with open('melfinny4.json') as json_file:
+with open('example_for_reddit.json') as json_file:
     json_data = json.load(json_file)
     json_values_as_list = json_data.values()
     values = str(json_values_as_list)
@@ -70,7 +70,7 @@ with open('melfinny4.json') as json_file:
 
     just_nums_as_list = just_nums.split(', ')
     # deleting trash values
-    while 'DEL' in just_nums_as_list or None in just_nums_as_list:
+    while 'DEL' in just_nums_as_list:
         index = just_nums_as_list.index('DEL')
         del just_nums_as_list[index]
     # removes weird blank element
