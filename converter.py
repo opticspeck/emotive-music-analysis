@@ -11,7 +11,7 @@ filtered_string = ""
 list_of_nums = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 list_of_mums_and_separators = list_of_nums + ['.'] + ['-']
 
-with open('example_for_reddit.json') as json_file:
+with open('example.json') as json_file:
     json_data = json.load(json_file)
     json_values_as_list = json_data.values()
     values = str(json_values_as_list)
@@ -58,7 +58,7 @@ with open('example_for_reddit.json') as json_file:
         elif values[x] == 'd' and values[x + 1] == 's' and values[x + 2] == '_' and values[x + 3] == 'k' and \
                 values[x + 4] == 'e':
             # this accounts for keys that are flat (b) or sharp (#)
-            if values[x + 5] == 'b' or '#':
+            if values[x + 5] == 'b' or values[x + 5] == '#':
                 just_nums += ", '" + values[x + 10] + values[x + 11] + "', "
             else:
                 just_nums += ", '" + values[x + 10] + "', "
