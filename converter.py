@@ -3,7 +3,10 @@
 # https://m3l.me
 
 import json
+from shutil import copyfile
 
+new_file_name = "41"
+new_file_name += ".arff"
 header = ""
 just_nums = ""
 end_str = ""
@@ -11,7 +14,7 @@ filtered_string = ""
 list_of_nums = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 list_of_mums_and_separators = list_of_nums + ['.'] + ['-']
 
-with open('example.json') as json_file:
+with open('41.json') as json_file:
     json_data = json.load(json_file)
     json_values_as_list = json_data.values()
     values = str(json_values_as_list)
@@ -90,3 +93,21 @@ with open('example.json') as json_file:
     print('just the numbers as a string: ', just_nums)
     print('just the numbers as list:     ', just_nums_as_list)
     print('filtered numbers as string:   ', filtered_string)
+
+    # outputting to new file for weka
+    copyfile('base_first.arff', new_file_name)
+    f = open(new_file_name, "a+")
+    point = filtered_string.count(',')
+    point = point - 4375
+    # beats_position is the only thing that varies in the attributes list between songs
+    for x in range(point):
+        if x == point -1:
+            f.write('@attribute     rhythm.beats_position.' + str(x) + '    REAL')
+        else:
+            f.write('@attribute     rhythm.beats_position.' + str(x) + '    REAL\n')
+    j = open('base_second.arff', "r")
+    data = j.read()
+    j.close()
+    f.write(data)
+    f.write(filtered_string)
+    f.close()
