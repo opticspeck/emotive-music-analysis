@@ -1,5 +1,15 @@
+import csv
+
+temp_list = []
+valence_str = ""
+arousal_str = ""
+mood_str = ""
+valence_list = []
+arousal_list = []
+mood_list = []
 valence_mean = 0.0
 arousal_mean = 0.0
+
 
 def classify_mood(valence, arousal):
     # quadrant 1 analysis
@@ -38,8 +48,36 @@ def classify_mood(valence, arousal):
     else:
         return 'error'
 
+
 print('Music Evaluation Software; Mel Mark; Park University; Fall 2019\n')
-valence_mean = float(input('What is the valence mean?\t'))
-arousal_mean = float(input('What is the arousal mean?\t'))
-mood = classify_mood(valence_mean, arousal_mean)
-print('I predict the mood of this song is: ', mood)
+
+# opening table of valence and arousal means
+with open('table.csv', 'r') as f:
+    reader = csv.reader(f)
+    temp_list = list(reader)
+f.close()
+# storing them in lists
+for x in temp_list:
+    valence_str += x[1] + ', '
+    arousal_str += x[2] + ', '
+valence_list = valence_str.split(', ')
+arousal_list = arousal_str.split(', ')
+# deleting the column names and extra blank
+del valence_list[0]
+del arousal_list[0]
+del valence_list[1744]
+del arousal_list[1744]
+valence_list = [float(i) for i in valence_list]
+arousal_list = [float(i) for i in arousal_list]
+# classifying the moods and appending to big string
+for z in range(1744):
+    mood_str += classify_mood(valence_list[z], arousal_list[z]) + ', '
+# converting big string to a more manageable list
+mood_list = mood_str.split(', ')
+del mood_list[1744]
+print(len(valence_list), 'values; valence list:\t', valence_list)
+print(len(arousal_list), 'values; arousal list:\t', arousal_list)
+print(len(mood_list), 'values; mood list:\t', mood_list)
+for i in range(len(mood_list)):
+    print(mood_list[i])
+
