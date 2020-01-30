@@ -94,7 +94,7 @@ with open(new_file_name + '.json') as json_file:
     print('json data as list:            ', json_values_as_list)
     print('json data as a string:        ', values)
     print('just the numbers as a string: ', just_nums)
-    print('just the numbers as list:     ',  8)
+    print('just the numbers as list:     ',  just_nums_as_list)
     print('filtered numbers as string:   ', filtered_string)
 
     # outputting to new file for weka
