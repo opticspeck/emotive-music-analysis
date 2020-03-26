@@ -1,0 +1,10 @@
+model name,algorithim used,attributes used,accuracy,inaccuracy,kappa statistic,MAE,,136,dean_town,sure_sure_short,juice
+003t,smo,cherrypicked (908),100%,0%,1,0.1389,,pleased,pleased,pleased,annoyed
+002,simple logistic,cherrypicked (908),97.50%,2.50%,0.97,0.005,,happy,nervous,sad,pleased
+nerualnetwork,multilayer perception (NN),cherrypicked (908),91.67%,8.33%,0.909,0.0153,,pleased,pleased,excited,pleased
+j48feb,j48 tree,cherrypicked (908),86.67%,13.33%,0.8545,0.0314,,bored,sleepy,sleepy,pleased
+smalNN,multilayer perception (NN),"bpm, danceability, chords_key, chords_scale, mood",72.50%,27.50%,0.7,0.076,,relaxed,relaxed,calm,excited
+SM_003t,smo,cherrypicked mean & stdev only (72),80,20,0.7818,0.1401,,pleased,pleased,happy,pleased
+SM_002,simple logistic,cherrypicked mean & stdev only (72),93.33,6.67,0.9273,0.0621,,pleased,pleased,happy,pleased
+SM_nerualnetwork,multilayer perception (NN),cherrypicked mean & stdev only (72),90.8333,9.1667,0.9,0.0219,,peaceful,pleased,bored,pleased
+SM_j48feb,j48 tree,cherrypicked mean & stdev only (72),88.3333,11.6667,0.8727,0.0252,,peaceful,sleepy,sleepy,pleased
