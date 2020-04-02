@@ -1,0 +1,10 @@
+@relation 'EssentiaData-weka.filters.unsupervised.attribute.Remove-R1-3597,3599-3603,3605-4374'
+
+@attribute rhythm.bpm numeric
+@attribute rhythm.danceability numeric
+@attribute tonal.chords_key.N {A,Ab,A#,B,Bb,B#,C,Cb,C#,D,Db,D#,E,Eb,E#,F,Fb,F#,G,Gb,G#}
+@attribute tonal.chords_scale.N {major,minor}
+@attribute metadata.mood.N {pleased,happy,excited,annoyed,angry,nervous,sad,bored,sleepy,relaxed,peaceful,calm}
+
+@data
+101.16832,2.15317,C,major,?

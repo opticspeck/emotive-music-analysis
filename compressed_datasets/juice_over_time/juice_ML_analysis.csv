@@ -1,0 +1,10 @@
+type of algorithim,type of ML,juice_og,juice_1_intro,juice_2_verse1,juice_3_prechorus,juice_4_chorus,juice_5_verse2,juice_6_prechorus,juice_7_chorus,juice_8_bridge,juice_9_chorus
+SM_003t,SMO,"pleased, .167","pleased, .167","pleased, .167","pleased, .167","pleased, .167","happy, .167","pleased, .167","pleased, .167","pleased, .167","pleased, .152"
+SM_002,simple logistic,"pleased, .821","pleased, .972","pleased, .969","pleased, .664","pleased, .737",happy .426,"pleased, .341","pleased, .678","pleased, .976","pleased, .311"
+SM_nerualnetwork,neuralnetwork,"pleased, .962","pleased, .541",pleased .845,pleased .739,"pleased, .777",angry .406,"pleased, .718","pleased, .81","pleased, .978","pleased, .64"
+SM_j48feb,j48,"angry, .667","happy, 1",excited .667,"pleased, 1",angry .667,angry .667,"pleased, 1",angry .667,angry .667,angry .667
+,"result(s):
+(based on
+weights of
+confidence)",75% pleased,63% pleased,75% pleased,100% pleased,72% pleased,36% happy,100% pleased,71% pleased,76% pleased,62% pleased
+,,25% angry,37% happy,25% excited,,28% angry,64% angry,,29% angry,24% angry,38% angry
