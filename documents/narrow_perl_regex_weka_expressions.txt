@@ -1,0 +1,11 @@
+###############################################################
+These expressions are to select a variety of attributes in Weka
+to either remove or invert and then remove to eventually narrow
+it down to the slimmed-down 72 attribute list.
+###############################################################
+
+### pattern --> below expression --> invert --> remove ###
+lowlevel.melbands_crest.*|lowlevel.melbands_kurtosis.*|lowlevel.spectral_energy.*|lowlevel.spectral_entropy.*|lowlevel.spectral_flux.*|lowlevel.spectral_rolloff.*|lowlevel.spectral_skewness.*|lowlevel.zerocrossingrate.*|lowlevel.gfcc.mean.*|lowlevel.mfcc.mean.*|rhythm.danceability.*|rhythm.onset_rate.*|rhythm.beats_loudness_band_ratio.mean.*|rhythm.beats_loudness_band_ratio.stdev.*|tonal.chords_strength.*|tonal.hpcp_entropy.*|tonal.key_edma.strength.*|tonal.key_krumhansl.strength.*|tonal.key_temperley.strength
+
+### pattern --> below expression --> remove ###
+.*dmean|.*dmean2|.*dvar|.*dvar2|.*max|.*median|.*min|.*var
